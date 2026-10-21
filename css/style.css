@@ -1,0 +1,71 @@
+/* 1. Variabler */
+:root {
+    /* Huvudfärger */
+    --primary-color: #762634;
+    --secondary-color: #f5e9db;
+    --accent-color: #d5ad79;
+
+    /* Kompletterande färger */
+    --green-color: #475b49;
+    --pink-color: #dda8a6;
+
+    /* Text */
+    --dark-text-color: #2b2b2b;
+}
+
+/* 2. Grundregler */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--dark-text-color);
+}
+
+a {
+    color: inherit;
+}
+
+
+/* 3. Header och navigation */
+header {
+    background-color: var(--primary-color);
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.logo {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.logo img {
+    display: block; 
+    width: 200px; 
+    max-width: 100%;
+    height: auto;
+}
+
+
+.menu-toggle {
+    grid-column: 3;
+    justify-self: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--secondary-color);
+
+}
+
+.menu {
+    grid-column: 1 / -1;
+    max-height: 0;
+    overflow: hidden;
+
+}
