@@ -26,13 +26,18 @@ body {
 
 a {
     color: inherit;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
 }
 
 
 /* 3. Header och navigation */
 header {
     background-color: var(--primary-color);
-    padding: 30px;
+    padding: 2rem;
 
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -69,3 +74,38 @@ header {
     overflow: hidden;
 
 }
+
+
+/* Knappar */
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+}
+
+footer h2 {
+    text-decoration: underline;
+}
+
+footer img {
+    display: block;
+    margin: 0 auto;
+    width: 200px; 
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.opening-hours dl {
+    display: grid; 
+    grid-template-columns: max-content max-content;
+    column-gap: 1rem;
+    row-gap: 0.4rem;
+    justify-content: center;
+
+} 
