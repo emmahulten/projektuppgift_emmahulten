@@ -23,11 +23,17 @@ body {
     background-color: var(--secondary-color);
     color: var(--dark-text-color);
     font-family: "Momo Trust Sans", sans-serif;
+    font-size: 1rem;
 }
 
 h1, h2, h3 {
     font-family: "DM Serif Display", serif;;
     font-weight: 400;
+}
+
+h2 {
+    font-size: 1.6rem;
+    text-align: center;
 }
 
 a {
@@ -109,9 +115,18 @@ header {
 }
 
 
-
-
 /* Knappar */
+.button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
 
 /* Footer */
 
@@ -144,3 +159,98 @@ footer img {
     justify-content: center;
 
 } 
+
+/* --- Index-sidan --- */
+
+/* Hero */
+
+.hero {
+    position: relative;
+    
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+}
+
+.hero-text {
+    position: absolute;
+    text-align: left;
+    max-width: 12rem;
+    top: 20%;
+    left: 3%;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text p {
+    padding-bottom: 1rem;
+}
+
+.hero-text .button {
+    text-shadow: none;
+    margin-left: 0.5rem;
+}
+
+/* Intro-sektion */
+
+.intro {
+    padding: 2rem;
+}
+
+.intro h2 {
+    color: var(--primary-color);
+}
+
+/* Sip&Snacks sektion */
+.sips-snacks {
+    margin: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.sips-snacks img {
+    width: 100%;
+    height: auto;
+}
+
+.sips-content {
+    padding: 0 1.4rem 2rem;
+}
+
+/* Events sektion */
+.events {
+    margin: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 1.4rem 2rem;
+}
+
+/* Merch sektion */
+.merch {
+    margin: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 1.4rem 2rem;
+}
+
+.merch img {
+    width: 100%;
+    height: auto;
+    border-style: groove;
+    border-color: var(--accent-color);
+}
+
+.merch .button {
+    position: relative;
+    margin-top: -1.25rem;
+}
+
