@@ -38,7 +38,7 @@
 
     <main>
         <!--Huvudinnehåll: Kontaktsida- kontaktformulär och länk till email-->
-        <p id="confirmation"></p>
+        <div id="confirmation"></div>
         <section class="contact-form">
             <h1>Kontakt</h1>
         
@@ -66,7 +66,40 @@
 
                 <p id="subjectError" class="error-message"></p>
 
+                <p id="timeInfo" class="hidden">Bordsbokning kl. 17–20. 
+                    Övriga tider gäller drop-in i mån av plats.
+                </p>
+
+                <div id="bookingFields" class="hidden">
+                    <label for="date">Önskat datum:</label>
+                    <input type="date" id="date" name="date">
+                    <p id="dateError" class="error-message"></p>
+
+                    <label for="guests">Antal personer:</label>
+                    <input type="number" id="guests" name="guests">
+                    <p id="guestsError" class="error-message"></p>
+                </div>
+
+                <div id="timeField" class="hidden">
+                    <label for="time">Önskad tid:</label>
+                    <select id="time" name="time">
+                        <option value="">Välj tid</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+
+                    </select>
+                    <p id="timeError" class="error-message"></p>
+                </div>
+
                 <label for="message">Meddelande:</label>
+                <p id="eventInfo" class="hidden">Uppge önskad starttid och berätta gärna mer 
+                    om din tillställning i meddelandet nedan.
+                </p>
                 <textarea id="message" name="message"></textarea>
                 <p id="messageError" class="error-message"></p>
 

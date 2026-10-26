@@ -305,3 +305,13 @@ textarea {
     color: var(--accent-color);
     text-decoration: underline;
 }
+
+.hidden {
+    display: none; 
+}
+
+#timeInfo,
+#eventInfo {
+    font-size: 0.8em;
+    color: var(--primary-color);
+}

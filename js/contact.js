@@ -1,39 +1,76 @@
 "use strict";
 
 // --- 1. DOM-referenser ---
-// Hämta element från DOM 
-const formEl = document.querySelector("#contactForm");
 
+// Formulär och bekräftelse
+const formEl = document.querySelector("#contactForm");
+const confirmationEl = document.querySelector("#confirmation");
+
+// Formulärfält
 const nameEl = document.querySelector("#name");
 const emailEl= document.querySelector("#email");
 const phoneEl= document.querySelector("#phone");
 const subjectEl = document.querySelector("#subject");
 const messageEl = document.querySelector("#message");
 
+// Bokningsfält
+const dateEl = document.querySelector("#date");
+const guestsEl = document.querySelector("#guests");
+const timeEl = document.querySelector("#time");
+
+
+// Dynamiska sektioner
+const bookingEl = document.querySelector("#bookingFields");
+const timeOptionEl = document.querySelector("#timeField");
+
+
+// Informationstexter 
+const timeInfoEl = document.querySelector("#timeInfo");
+const eventInfoEl = document.querySelector("#eventInfo");
+
+// Felmeddelanden
 const nameErrorEl = document.querySelector("#nameError");
 const emailErrorEl = document.querySelector("#emailError");
 const phoneErrorEl = document.querySelector("#phoneError");
 const subjectErrorEl = document.querySelector("#subjectError");
 const messageErrorEl = document.querySelector("#messageError");
+const dateErrorEl = document.querySelector("#dateError");
+const guestsErrorEl = document.querySelector("#guestsError");
+const timeErrorEl = document.querySelector("#timeError");
 
+// Samlingar för att rensa fel 
 const formInputs = formEl.querySelectorAll("input, select, textarea");
 const errorMessages = formEl.querySelectorAll(".error-message");
 
-const confirmationEl = document.querySelector("#confirmation");
 
 
 
-// --- 2. Variabler ---
 
 
-// --- 3. Eventlyssnare ---
-// Änring av ämne i kontaktformulär
-/* subjectEl.addEventListener("change", changeSubject); */
 
-formEl.addEventListener("submit", function(event) {
+
+
+
+
+
+// --- 2. Eventlyssnare ---
+
+subjectEl.addEventListener("change", changeSubject);
+formEl.addEventListener("submit", onSubmit);
+
+
+// --- 3. Funktioner ---
+
+function onSubmit(event) {
     event.preventDefault();
 
-    if (validateFrom()) {
+    const name = nameEl.value.trim();
+    const email = emailEl.value.trim();
+    const phone = phoneEl.value.trim();
+    const subject = subjectEl.value;
+    const message = messageEl.value.trim();
+
+    if (validateForm(name, email, phone, subject, message)) {
         // Skriv ut bekräftelse meddelande 
         confirmationEl.innerHTML = `
             <h2>Tack för ditt meddelande!</h2>
@@ -45,22 +82,24 @@ formEl.addEventListener("submit", function(event) {
             </p>`;
         confirmationEl.classList.add("confirmation-success");
 
-        // Rensa input fält 
+        confirmationEl.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        // Rensa formulär och återställ dynamiska fält
         formEl.reset();
+        changeSubject();
+
     }
-
-});
-
+}
 
 
 
-
-
-// --- 4. Funktioner ---
 
 
 // Validera formulär
-function validateFrom() {
+function validateForm(name, email, phone, subject, message) {
     let isValid = true;
 
     // Rensa tidigare felmarkringar
@@ -75,62 +114,113 @@ function validateFrom() {
 
 
     // Validera inmatning och skriv ut ev felmeddelanden 
-    if (nameEl.value.trim() === "") {
+    if (name === "") {
         nameEl.classList.add("input-error")
         nameErrorEl.textContent = "Du måste ange ditt namn."
 
         isValid = false;
     }
 
-    if (emailEl.value.trim() === "") {
+    if (email === "") {
         emailEl.classList.add("input-error")
         emailErrorEl.textContent = "Du måste ange din e-postadress."
 
         isValid = false;
-    } else if (!emailEl.value.includes("@") || !emailEl.value.includes(".")) {
+    } else if (!email.includes("@") || !email.includes(".")) {
         emailEl.classList.add("input-error")
         emailErrorEl.textContent = "Ange en giltig e-postadress."
 
         isValid = false;
     }
 
-    if (phoneEl.value.trim() === "") {
+    if (phone === "") {
         phoneEl.classList.add("input-error")
         phoneErrorEl.textContent = "Du behöver ange ditt telefonnummer."
 
         isValid = false;
     }
 
-    if (subjectEl.value === "") {
+    if (subject === "") {
         subjectEl.classList.add("input-error")
         subjectErrorEl.textContent = "Du behöver välja ett ämne."
 
         isValid = false;
     }
 
-    if (messageEl.value.trim() === "") {
+    if (message === "") {
         // Om rutan enbart innehåller mellanslag, nollställ
         messageEl.value = "";
-        
+
         messageEl.classList.add("input-error")
         messageErrorEl.textContent = "Du behöver skriva ett meddelande."
     
 
         isValid = false;
     }
+    // Validera bokningsfält OM användaren valt en bokning 
+    if (subject === "table" || subject === "room") {
+        if (!validateBooking()) {
+            isValid = false;
+        }
+    }
 
 
     return isValid;
 }
 
-/* function changeSubject() {
+
+
+// Validera dynamiska fält
+function validateBooking() {
+    let isValid = true;
+
+    //Gemensamma bokningsfält
+    if (dateEl.value == "") {
+        dateEl.classList.add("input-error")
+        dateErrorEl.textContent = "Du behöver ange ett datum."
+
+        isValid = false;
+    }
+
+    if (guestsEl.value == "") {
+        guestsEl.classList.add("input-error")
+        guestsErrorEl.textContent = "Du behöver ange antal personer bokningen avser."
+
+        isValid = false;
+    }
+
+    // Endast bordsbokning
+    if (subjectEl.value === "table") {
+        if (timeEl.value === ""){
+            timeEl.classList.add("input-error")
+            timeErrorEl.textContent = "Vänligen ange önskad tid"
+            isValid = false;
+        }
+    }
+
+    return isValid;
+    
+}
+
+
+//  Hantera val av ämne 
+function changeSubject() {
     const selectedSubject = subjectEl.value; 
 
+    // Dölj alla dynamiska fält först
+    bookingEl.classList.add("hidden");
+    timeOptionEl.classList.add("hidden");
+    timeInfoEl.classList.add("hidden");
+    eventInfoEl.classList.add("hidden");
+
     if (selectedSubject === "table") {
-        // Visa fält för bordsbokning
-    } else if {
-        // Visa fält för rumsbokning
-    } else {
-        // Visa fält för allmän fråga 
+        bookingEl.classList.remove("hidden")
+        timeOptionEl.classList.remove("hidden")
+        timeInfoEl.classList.remove("hidden")
+    } else if (selectedSubject === "room") {
+        bookingEl.classList.remove("hidden")
+        eventInfoEl.classList.remove("hidden")
     }
-} */
+} 
+
+
