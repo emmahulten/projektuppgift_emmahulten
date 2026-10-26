@@ -123,6 +123,7 @@ header {
     margin: 0 auto;
     background-color: var(--accent-color);
     color: var(--primary-color);
+    border: none;
     border-radius: 20px;
     padding: 0.5rem 1.2rem;
     font-weight: 600;
@@ -200,7 +201,7 @@ footer img {
     margin-left: 0.5rem;
 }
 
-/* Intro-sektion */
+/* --- Intro-sektion --- */
 
 .intro {
     padding: 2rem;
@@ -255,3 +256,52 @@ footer img {
     margin-top: -1.25rem;
 }
 
+
+
+/* --- Kontakt sida --- */
+
+.contact-form {
+    margin: 1rem;
+    padding: 2rem;
+    border-style: double;
+    padding-left: 5rem;
+}
+
+
+.contact-form label,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.confirmation-success {
+    background-color: var(--green-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-style: double;
+    border-color: var(--accent-color);
+    
+}
+
+.confirmation-success a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}

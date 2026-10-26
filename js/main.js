@@ -5,8 +5,11 @@
 const menuBtn = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 
+
 // --- 2. Variabler ---
 
+
+// --- 3. Eventlyssnare ---
 // Mobilmeny
 menuBtn.addEventListener("click", function() {
 
@@ -18,7 +21,8 @@ menuBtn.addEventListener("click", function() {
 });
 
 
-// --- 3. Eventlyssnare ---
+
+
 
 
 // --- 4. Funktioner ---
