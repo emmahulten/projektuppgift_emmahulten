@@ -237,21 +237,21 @@ footer img {
 }
 
 /* Merch sektion */
-.merch {
+.merch-preview {
     margin: 1rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 1rem 1.4rem 2rem;
 }
 
-.merch img {
+.merch-preview img {
     width: 100%;
     height: auto;
     border-style: groove;
     border-color: var(--accent-color);
 }
 
-.merch .button {
+.merch-preview .button {
     position: relative;
     margin-top: -1.25rem;
 }
@@ -314,4 +314,72 @@ textarea {
 #eventInfo {
     font-size: 0.8em;
     color: var(--primary-color);
+}
+
+
+/* --- Merch-sidan --- */
+
+.social-club-intro {
+    display: flow-root; 
+    background-color: var(--pink-color);
+    text-align: center;
+    padding: 2rem;
+    
+
+   
+}
+.social-club-intro h1{
+    color: var(--primary-color);
+    font-weight: 600;
+   
+}
+
+.merch {
+    text-align: center;
+    padding: 2rem;
+
+}
+
+.merch h2{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.merch h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.carousel {
+    background-color: var(--pink-color);
+    margin: 2rem;
+    padding-bottom: 1rem;
+}
+
+.carousel-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    background-color: var(--green-color);
+    border: solid 2px;
+}
+
+.charity {
+    display: flow-root;
+    background-color: var(--green-color);
+    color: var(--secondary-color);
+    padding: 2rem;
 }
