@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: "DM Serif Display", serif;;
+    font-family: "DM Serif Display", serif;
     font-weight: 400;
 }
 
@@ -129,6 +129,8 @@ header {
     font-weight: 600;
     font-size: 0.8rem;
 }
+
+
 
 /* Footer */
 
@@ -336,13 +338,18 @@ textarea {
 
 .merch {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 
 }
 
-.merch h2{
+.merch-info {
+    padding: 1rem;
+}
+
+.merch-info h2{
     color: var(--primary-color);
     font-weight: 600;
+    font-size: 1.8rem;
 }
 
 .merch-grid {
@@ -353,12 +360,11 @@ textarea {
 .merch h3 {
     text-align: center;
     font-size: 1.6rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .carousel {
-    background-color: var(--pink-color);
-    margin: 2rem;
+    background-color: var(--primary-color);
     padding-bottom: 1rem;
 }
 
@@ -373,8 +379,8 @@ textarea {
 .carousel img {
     width: 100%;
     height: auto;
-    background-color: var(--green-color);
-    border: solid 2px;
+    background-color: var(--primary-color);
+    border: 1px solid  var(--accent-color);
 }
 
 .charity {
@@ -382,4 +388,55 @@ textarea {
     background-color: var(--green-color);
     color: var(--secondary-color);
     padding: 2rem;
+}
+
+.carousel-name {
+    color: var(--secondary-color);
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.prev{
+    position: relative;
+    margin-right: -2rem;
+    border-radius: 20px;
+    border-style: none;
+    padding: 2.5rem 0.5rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.next {
+    position: relative;
+    margin-left: -2rem;
+    border-radius: 20px;
+    border-style: none;
+    padding: 2.5rem 0.5rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 500; 
+}
+
+.accent-text {
+    color: var(--primary-color);
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.accent-charity {
+    color: inherit;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2rem;
+
 }
