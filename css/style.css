@@ -1,4 +1,4 @@
-/* 1. Variabler */
+/* --- 1. Variabler --- */
 :root {
     /* Huvudfärger */
     --primary-color: #762634;
@@ -7,13 +7,14 @@
 
     /* Kompletterande färger */
     --green-color: #475b49;
+    --dark-green-color: #263127;
     --pink-color: #dda8a6;
 
     /* Text */
     --dark-text-color: #2b2b2b;
 }
 
-/* 2. Grundregler */
+/* --- 2. Grundregler --- */
 * {
     box-sizing: border-box;
 }
@@ -32,7 +33,15 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.accent-text {
+    color: var(--primary-color);
+    font-family: "Amatic SC", cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -43,7 +52,7 @@ a {
 
 
 
-/* 3. Header och navigation */
+/* --- 3. Header och navigation --- */
 header {
     background-color: var(--primary-color);
     padding: 2rem;
@@ -116,6 +125,13 @@ header {
 }
 
 
+/* --- 4. Gemensamma komponenter --- */
+
+
+.hidden {
+    display: none; 
+}
+
 /* Knappar */
 .button {
     display: block;
@@ -130,44 +146,70 @@ header {
     font-size: 0.8rem;
 }
 
-
-
-/* Footer */
-
-footer {
+/* Bildkarusell */
+.carousel {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 5rem;
-
-}
-
-footer h2 {
-    text-decoration: underline;
-}
-
-footer img {
-    display: block;
-    margin: 0 auto;
-    width: 200px; 
-    height: auto;
     padding-bottom: 1rem;
 }
 
-.opening-hours dl {
-    display: grid; 
-    grid-template-columns: max-content max-content;
-    column-gap: 1rem;
-    row-gap: 0.4rem;
-    justify-content: center;
+.carousel-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
 
-} 
+.carousel img {
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-color);
+    border: 1px solid  var(--accent-color);
+}
 
-/* --- Index-sidan --- */
+
+.carousel-name {
+    color: var(--secondary-color);
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.carousel-description {
+    padding: 0 1.8rem;
+
+}
+
+.prev{
+    position: relative;
+    margin-right: -2rem;
+    border-radius: 20px;
+    border-style: none;
+    padding: 2.5rem 0.5rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.next {
+    position: relative;
+    margin-left: -2rem;
+    border-radius: 20px;
+    border-style: none;
+    padding: 2.5rem 0.5rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 500; 
+}
+
+
+/* --- 5. Startsida --- */
 
 /* Hero */
-
 .hero {
     position: relative;
     
@@ -203,7 +245,8 @@ footer img {
     margin-left: 0.5rem;
 }
 
-/* --- Intro-sektion --- */
+
+/* Intro-sektion */
 
 .intro {
     padding: 2rem;
@@ -260,7 +303,7 @@ footer img {
 
 
 
-/* --- Kontakt sida --- */
+/* --- 6. Kontakt --- */
 
 .contact-form {
     margin: 1rem;
@@ -308,9 +351,6 @@ textarea {
     text-decoration: underline;
 }
 
-.hidden {
-    display: none; 
-}
 
 #timeInfo,
 #eventInfo {
@@ -319,27 +359,23 @@ textarea {
 }
 
 
-/* --- Merch-sidan --- */
+/* --- 7. Merch --- */
 
 .social-club-intro {
     display: flow-root; 
     background-color: var(--pink-color);
     text-align: center;
-    padding: 2rem;
-    
-
-   
+    padding: 2rem;  
 }
+
 .social-club-intro h1{
     color: var(--primary-color);
-    font-weight: 600;
-   
+    font-weight: 600;  
 }
 
 .merch {
     text-align: center;
     padding: 1rem;
-
 }
 
 .merch-info {
@@ -349,7 +385,6 @@ textarea {
 .merch-info h2{
     color: var(--primary-color);
     font-weight: 600;
-    font-size: 1.8rem;
 }
 
 .merch-grid {
@@ -363,26 +398,6 @@ textarea {
     color: var(--secondary-color);
 }
 
-.carousel {
-    background-color: var(--primary-color);
-    padding-bottom: 1rem;
-}
-
-.carousel-content {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-    background-color: var(--primary-color);
-    border: 1px solid  var(--accent-color);
-}
-
 .charity {
     display: flow-root;
     background-color: var(--green-color);
@@ -390,53 +405,158 @@ textarea {
     padding: 2rem;
 }
 
-.carousel-name {
-    color: var(--secondary-color);
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.6rem;
-}
-
-.prev{
-    position: relative;
-    margin-right: -2rem;
-    border-radius: 20px;
-    border-style: none;
-    padding: 2.5rem 0.5rem;
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    font-weight: 500;
-
-}
-
-.next {
-    position: relative;
-    margin-left: -2rem;
-    border-radius: 20px;
-    border-style: none;
-    padding: 2.5rem 0.5rem;
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    font-weight: 500; 
-}
-
-.accent-text {
-    color: var(--primary-color);
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-
-.accent-charity {
+.charity .accent-text {
     color: inherit;
+}
+
+
+
+/* --- 8. Sips & Snacks --- */
+
+/* Sidans grundlayout */
+.menu-page {
+    background-color: var(--secondary-color);
+    margin: 1rem;
+}
+
+.menu-page h1 {
+    font-weight: 600;
+}
+
+/* Introduktion*/
+.menu-intro {
+    padding: 0 1rem;
     text-align: center;
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.2rem;
+}
+
+
+/* Signaturdrinkar*/
+#drinks {
+    background-color: var(--green-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+#drinks img {
+    background-color: var(--dark-green-color);
+    border: 2px solid var(--accent-color);
+}
+
+.menu-page .prev,
+.menu-page .next {
+    background-color: var(--green-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+
+/* Snacks & Bites */
+.snacks-bites {
+    border-style: double;
+    border-color: var(--primary-color);
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.snacks-bites img {
+    display: block;
+    margin:0 auto;
+    width: 60%;
+    height: auto;
+    padding-top: 1rem;
+}
+
+.snacks-bites h2{
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 2rem;
+}
+
+
+/* Kategorirubriker */
+.menu-category-header {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.menu-category-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.menu-category-header p {
+    margin-top: 0;
+}
+
+
+
+/* Maträtter */
+.menu-item {
+    border-bottom: 1px solid var(--primary-color);
+    padding: 1rem 0;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    color: var(--primary-color);
+}
+
+.menu-item h4 {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.menu-item p,
+.menu-item span {
+    font-size: 0.9rem;;
+}
+
+
+
+/* --- 9. Event? --- */
+
+
+
+
+
+/* --- 10. Footer --- */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 
 }
+
+footer h2 {
+    text-decoration: underline;
+}
+
+footer img {
+    display: block;
+    margin: 0 auto;
+    width: 200px; 
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.opening-hours dl {
+    display: grid; 
+    grid-template-columns: max-content max-content;
+    column-gap: 1rem;
+    row-gap: 0.4rem;
+    justify-content: center;
+
+} 
+
+
+
+/* --- 11. Media queries --- */

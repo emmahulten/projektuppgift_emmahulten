@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Momo+Trust+Sans:wght@200..800&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="Stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -35,12 +37,151 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Sips & Snacks</h1>
+    <main class="menu-page">
+        <section class="menu-intro">
+            <h1>Sips & Snacks</h1>
+            <p class="accent-text">Good drinks, good company.</p>
+            <p>
+                Hos Frankie's står drinkarna i centrum. Här hittar du allt från tidlösa
+                klassiker till våra egna signaturcocktails, skapade för både första skålen
+                och kvällens sista runda. Och självklart finns alla våra signaturdrinkar
+                även som alkoholfria mocktails!
+            </p>
+            <p>
+                Och något gott till glaset? Självklart! Njut av salta snacks, charkbrickor att
+                dela med vännerna eller lite matigare favoriter som sliders och mini lobster rolls.
+            </p>
+            <p>
+                Oavsett om du tittar förbi på en after work eller stannar hela kvällen finns det
+                alltid något att sippa på och något gott att dela.
+            </p>
+        </section>
 
 
+        <article id="drinks" class="carousel">
+            <h2>Signatur cocktails</h2>
+            <p>149 kr / Mocktail 99 kr</p>
+            <p>Alla våra signaturdrinkar finns även alkoholfria.</p>
+
+            <div class="carousel-content">
+                <button class="prev" type="button">❮</button>
+                <img src="images/drinks/1.png" alt="En av Frankie's signatur cocktails">
+                <button class="next" type="button">❯</button>
+            </div>
+            <p class="carousel-name"></p>
+            <p class="carousel-description"></p>
+        </article>
 
 
+        <section class="snacks-bites">
+            <img src="images/frankies_logo_red.png" alt="logotyp">
+            <h2>Snacks & Bites</h2>
+
+            <div class="menu-category-header">
+                <h3>Little Snacks</h3>
+                <p class="accent-text">Something to nibble on.</p>
+            </div>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Marinerade oliver</h4>
+                    <span>59 SEK</span>
+                </div>
+                <p>Med citron, vitlök och örter.</p>
+            </article>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Rostade nötter</h4>
+                    <span>49 SEK</span>
+                </div>
+                <p>Med rosmarin och flingsalt.</p>
+            </article>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Crispy Cheese</h4>
+                    <span>109 SEK</span>
+                </div>
+                <p>Friterade getostbollar med chilimarmelad.</p>
+            </article>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Chark & Cheese</h4>
+                    <span>139 SEK</span>
+                </div>
+                <p>Utvalda ostar, charkuterier och tillbehör.</p>
+            </article>
+
+            <div class="menu-category-header">
+                <h3>Bigger Bites</h3>
+                <p class="accent-text">For when you're a little more hungry.</p>
+            </div>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Mini Lobster Rolls</h4>
+                    <span>169 SEK</span>
+                </div>
+                <p>Små briochebröd med hummer, citron och örtmajonnäs.</p>
+            </article>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Frankie's Sliders</h4>
+                    <span>139 SEK</span>
+                </div>
+                <p>Miniburgare med cheddar, karamelliserad lök och dressing.</p>
+            </article>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Crispy Chicken Bites</h4>
+                    <span>119 SEK</span>
+                </div>
+                <p>Krispig kyckling med sesammajonnäs.</p>
+            </article>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Grilled Cheese Bites</h4>
+                    <span>119 SEK</span>
+                </div>
+                <p>Smörstekt surdegsbröd med cheddar, mozzarella och rödpesto.</p>
+            </article>
+
+            <div class="menu-category-header">
+                <h3>Sharing Plates</h3>
+                <p class="accent-text">Better together.</p>
+            </div>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>Frankie's Chark & Cheese</h4>
+                    <span>139 SEK/pers</span>
+                </div>
+                <p>
+                    Ett urval av charkuterier, ostar, oliver, marmelad och krispigt bröd.
+                    Perfekt att dela över ett glas eller två.
+                </p>
+                <p>För 2–8 personer</p>
+            </article>
+
+            <article class="menu-item">
+                <div class="menu-item-header">
+                    <h4>The Social Spread</h4>
+                    <span>149 SEK/pers</span>
+                </div>
+                <p>
+                    En härlig blandning av krispiga tryffelarancini, capresespett,
+                    vispad ricotta, marinerade grönsaker och varm focaccia.
+                    Serveras med pesto och het honung.
+                </p>
+                <p>För 2–8 personer</p>
+            </article>
+            <p class="accent-text">Good food tastes better together.</p>
+        </section>
     </main>
 
     <footer>

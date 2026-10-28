@@ -9,6 +9,7 @@ const menu = document.querySelector(".menu");
 const toteEl = document.querySelector("#totes");
 const postersEl = document.querySelector("#posters");
 const stuffEl = document.querySelector("#stuff");
+const drinksEl = document.querySelector("#drinks");
 
 // --- 2. Variabler ---
 
@@ -59,6 +60,45 @@ const toteItems = [
 // Array med Posters bilder för merch sidan 
 
 // Araray med övriga produkter för merch sidan 
+
+// Array m signaturdrinkar
+const drinkItems = [
+    {
+        name: "Frankie's No.1",
+        ingredients: "Vodka, svartvinbär, björnbär, citron och fläder. Toppas med soda.",
+        image: "images/drinks/1.png"
+    },
+    {
+        name: "Squeeze Me",
+        ingredients: "Tequila blanco, limoncello, citron och agavesirap. Serveras med sockrad kant.",
+        image: "images/drinks/2.png"
+    },
+    {
+        name: "Pinky Promise",
+        ingredients: "Gin, rosa grapefrukt, fläder och prosecco.",
+        image: "images/drinks/3.png"
+    },
+    {
+        name: "The Usual",
+        ingredients: "Ljus rom, lime, mynta, fläder och sodavatten.",
+        image: "images/drinks/4.png"
+    },
+    {
+        name: "Old Flames",
+        ingredients: "Bourbon, lönnsirap, Angostura bitters och apelsinzest.",
+        image: "images/drinks/5.png"
+    },
+    {
+        name: "Bloody Lovely",
+        ingredients: "Vodka, färskpressad blodapelsin, blodapelsinsirap, lime och sodavatten.",
+        image: "images/drinks/6.png"
+    },
+    {
+        name: "Sweet Talk",
+        ingredients: "Gin, hallon, vanilj, citron och violsirap.",
+        image: "images/drinks/7.png"
+    },  
+];
 
 
 // --- 3. Eventlyssnare ---
@@ -130,9 +170,19 @@ function setupCarousel(carouselEl, carouselItems) {
     updateCarousel();
 }
 
-// Startar karusellen för respektive karusellelement
-setupCarousel(toteEl, toteItems);
+// Stäm av om karusell finns på sidan, tartar karusellen för respektive karusellelement
+if (toteEl) {
+    setupCarousel(toteEl, toteItems);
+}
+// Inväntar bildmaterial
+/* if (postersEl) {
+    setupCarousel(postersEl, posterItems);
+}
 
-/* -- Inväntar bildmaterial -- 
- setupCarousel(postersEl, postersImages);
-setupCarousel(stuffEl, stuffImages); */
+if (stuffEl) {
+    setupCarousel(stuffEl, stuffItems);
+} */
+
+if (drinksEl) {
+    setupCarousel(drinksEl, drinkItems);
+}
