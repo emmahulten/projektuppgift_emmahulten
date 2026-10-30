@@ -14,52 +14,135 @@ const drinksEl = document.querySelector("#drinks");
 // --- 2. Variabler ---
 
 
-// Array med object som innehåller bilder och information om produkt 
+// Array med object till merch-sidan
 const toteItems = [
     {
-        name: "Cheers", 
-        image: "images/merch/tote/1.png"
+        name: "Frankie's No.1", 
+        image: "images/merch/tote/1.png",
+        alt: "Krämfärgad tygkasse med tryck av Frankie's No.1 signaturdrink"
     },
     {
         name: "Spillin' Tea",
-        image: "images/merch/tote/2.png"
+        image: "images/merch/tote/2.png",
+        alt: "Krämfärgad tygkasse med grönt print, två skålande vinglas och texten `Spillin Tea at Frankie's`"
     },
     {
-        name: "Sunny Side Up",
-        image: "images/merch/tote/3.png"
+        name: "As you are",
+        image: "images/merch/tote/3.png",
+        alt: "Krämfärgad tygkasse med tryck av martiniglas och texten `Come as you are Stay a little longer`"
     }, 
     {
         name: "Tini Tote",
-        image: "images/merch/tote/4.png"
+        image: "images/merch/tote/4.png",
+        alt: "Krämfärgad tygkasse med tryck martiniglas och blått tekcnat vatten som bakgrund"
     },
     {
         name: "Tea Time, Anytime",
-        image: "images/merch/tote/5.png"
+        image: "images/merch/tote/5.png",
+        alt: "Krämfärgad tygkasse med grönt tryck av tekanna,tekopp och margaritaglas "
     },
     {
-        name: "The Usual",
-        image: "images/merch/tote/6.png"
-    },
-    {
-        name: "The Club Classic",
-        image: "images/merch/tote/7.png"
+        name: "Sh-eeerry",
+        image: "images/merch/tote/6.png",
+        alt: "Krämfärgad tygkasse med vinrött tryck av Frankie's logga och körsbär"
     },
     {
         name: "Triple Trouble",
-        image: "images/merch/tote/8.png"
+        image: "images/merch/tote/7.png",
+        alt: "Krämfärgad tygkasse med tre drinkar"
+    },
+    {
+        name: "The Club Classic - Red",
+        image: "images/merch/tote/8.png",
+        alt: "Krämfärgad tygkasse med vintrött tryck av Frankie's logga och martiniglas"
+    },
+    {
+        name: "The Club Classic - Green",
+        image: "images/merch/tote/9.png",
+        alt: "Krämfärgad tygkasse med grönt tryck av Frankie's logga och martiniglas"
+    }
+];
+
+    const posterItems = [
+    {
+        name: "Triple Trouble ",
+        image: "images/merch/posters/1.png",
+        alt: "Krämfärgad poster med tre färglada drinkar"
+    },
+    {
+        name: "As you are",
+        image: "images/merch/posters/2.png",
+        alt: "Krämfärgad poster med grönt tryck av martiniglas och texten `Come as you are Stay a little longer`"
+    },
+    {
+        name: "Sh-eeerry",
+        image: "images/merch/posters/3.png",
+        alt: "Krämfärgad poster med vinrött tryck av Frankie's logga och körsbär"
+    },
+    {
+        name: "The Club Classic - Green",
+        image: "images/merch/posters/4.png",
+        alt: "Krämfärgad poster med grönt tryck av Frankie's logga och martiniglas"
+    },
+    {
+        name: "The Club Classic - Red",
+        image: "images/merch/posters/5.png",
+        alt: "Krämfärgad poster med vinrött tryck av Frankie's logga och martiniglas"
+    },
+    {
+        name: "Midnight Dip",
+        image: "images/merch/posters/6.png",
+        alt: "Mörkblå poster med wiskeyglas och storisbit. Tecknad människa som dyker från isbiten ner i drinken"
+    },
+    {
+        name: "Frankie's No.1",
+        image: "images/merch/posters/7.png",
+        alt: "Krämfärgad poster med Frankie's No.1 drink. Vinglas men liladryck, svartvinbär och apelsinskiva på kanten"
+    },
+    {
+        name: "All Good",
+        image: "images/merch/posters/8.png",
+        alt: "Krämfärgad poster med grönt tryck av martiniglas och texten `SIPS, SNACKS, GOOD COMPANY`"
+    },
+    {
+        name: "Dancin' Queen",
+        image: "images/merch/posters/9.png",
+        alt: "Krämfärgad poster med dicsokula och grön text `Sippin', Dancin', Laughing & Living life`"
+    },
+    {
+        name: "Together",
+        image: "images/merch/posters/10.png",
+        alt: "Vinröd poster med krämfärgat tryck, två händer som skålar martiniglas och Frankie's logga"
     },
 ];
 
-/* const posterItems = [
+const stuffItems = [
     {
-        name: "",
-        image:
+        name: "Cup - Sh-eeerry",
+        image: "images/merch/stuff/1.png",
+        alt: "Krämfärgad emaljkopp med svart kant, vinrött tryck av Frankie's logga och körsbär"
     },
-]; */
-
-// Array med Posters bilder för merch sidan 
-
-// Araray med övriga produkter för merch sidan 
+    {
+        name: "Cup - The Club Classic",
+        image: "images/merch/stuff/2.png",
+        alt: "Två krämfärgade emaljkoppar med svart kant. Tryck av Frankie's logga och martiniglas, en vinröd och en grön"
+    },
+    {
+        name: "Cup - Spillin' Tea",
+        image: "images/merch/stuff/3.png",
+        alt: "Två krämfärgade emaljkoppar med svart kant. Tryck av skålande vinglas och texten `Spillin tea at Frankie's`, en vinröd och en grön"
+    },
+    {
+        name: "Cup - As you are",
+        image: "images/merch/stuff/4.png",
+        alt: "Krämfärgad emaljkopp med svart kant, grönt tryck av martiniglas och texten `Come as you are Stay a little longer`"
+    },
+    {
+        name: "Bok - Recept med signaturdrinkar & favoriter",
+        image: "images/merch/stuff/5.png",
+        alt: "Vinröd receptbok"
+    }
+];
 
 // Array m signaturdrinkar
 const drinkItems = [
@@ -136,6 +219,7 @@ function setupCarousel(carouselEl, carouselItems) {
     // Uppdatera bilden och tillhärande information 
     function updateCarousel() {
         imgEl.src = carouselItems[currentIndex].image;
+        imgEl.alt = carouselItems[currentIndex].alt || "";
         nameEl.textContent = carouselItems[currentIndex].name; 
 
         if (descriptionEl) {
@@ -174,14 +258,14 @@ function setupCarousel(carouselEl, carouselItems) {
 if (toteEl) {
     setupCarousel(toteEl, toteItems);
 }
-// Inväntar bildmaterial
-/* if (postersEl) {
+
+if (postersEl) {
     setupCarousel(postersEl, posterItems);
 }
 
 if (stuffEl) {
     setupCarousel(stuffEl, stuffItems);
-} */
+} 
 
 if (drinksEl) {
     setupCarousel(drinksEl, drinkItems);
