@@ -12,7 +12,7 @@ Webbplatsen är utvecklad med mobile-first som utgångspunkt och anpassas till o
 - JavaScript – interaktivitet och dynamisk funktionalitet
 - Git och GitHub – versionshantering och publicering
 
-##✨ Funktioner
+✨ Funktioner
 - Responsiv navigering med hamburgermeny på mindre skärmar.
 - Bildkaruseller för presentation av produkter och signaturdrinkar.
 - Kontaktformulär med dynamiska fält och JavaScript-validering.
