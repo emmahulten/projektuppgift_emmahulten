@@ -150,37 +150,37 @@ const drinkItems = [
     {
         name: "Frankie's No.1",
         ingredients: "Vodka, svartvinbär, björnbär, citron och fläder. Toppas med soda.",
-        image: "images/drinks/1.png"
+        image: "images/drinks/1.webp"
     },
     {
         name: "Squeeze Me",
         ingredients: "Tequila blanco, limoncello, citron och agavesirap. Serveras med sockrad kant.",
-        image: "images/drinks/2.png"
+        image: "images/drinks/2.webp"
     },
     {
         name: "Pinky Promise",
         ingredients: "Gin, rosa grapefrukt, fläder och prosecco.",
-        image: "images/drinks/3.png"
+        image: "images/drinks/3.webp"
     },
     {
         name: "The Usual",
         ingredients: "Ljus rom, lime, mynta, fläder och sodavatten.",
-        image: "images/drinks/4.png"
+        image: "images/drinks/4.webp"
     },
     {
         name: "Old Flames",
         ingredients: "Bourbon, lönnsirap, Angostura bitters och apelsinzest.",
-        image: "images/drinks/5.png"
+        image: "images/drinks/5.webp"
     },
     {
         name: "Bloody Lovely",
         ingredients: "Vodka, färskpressad blodapelsin, blodapelsinsirap, lime och sodavatten.",
-        image: "images/drinks/6.png"
+        image: "images/drinks/6.webp"
     },
     {
         name: "Sweet Talk",
         ingredients: "Gin, hallon, vanilj, citron och violsirap.",
-        image: "images/drinks/7.png"
+        image: "images/drinks/7.webp"
     },
 ];
 
