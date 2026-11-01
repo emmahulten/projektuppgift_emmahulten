@@ -1,4 +1,4 @@
-# Frankie´s 🍒
+# Frankie's 🍒
 Projektuppgift i kursen "Introduktion till webbutveckling med HTML, CSS och JavaScript", höstterminen 2026. 
 
 ## 🌱 Beskrivning
