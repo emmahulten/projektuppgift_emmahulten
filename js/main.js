@@ -17,53 +17,54 @@ const drinksEl = document.querySelector("#drinks");
 // Array med object till merch-sidan
 const toteItems = [
     {
-        name: "Frankie's No.1", 
-        image: "images/merch/tote/1.png",
+        name: "Frankie's No.1",
+        image: "images/merch/tote/1.webp",
         alt: "Krämfärgad tygkasse med tryck av Frankie's No.1 signaturdrink"
     },
     {
         name: "Spillin' Tea",
-        image: "images/merch/tote/2.png",
+        image: "images/merch/tote/2.webp",
         alt: "Krämfärgad tygkasse med grönt print, två skålande vinglas och texten `Spillin Tea at Frankie's`"
     },
     {
         name: "As you are",
-        image: "images/merch/tote/3.png",
+        image: "images/merch/tote/3.webp",
         alt: "Krämfärgad tygkasse med tryck av martiniglas och texten `Come as you are Stay a little longer`"
-    }, 
+    },
     {
         name: "Tini Tote",
-        image: "images/merch/tote/4.png",
+        image: "images/merch/tote/4.webp",
         alt: "Krämfärgad tygkasse med tryck martiniglas och blått tekcnat vatten som bakgrund"
     },
     {
         name: "Tea Time, Anytime",
-        image: "images/merch/tote/5.png",
+        image: "images/merch/tote/5.webp",
         alt: "Krämfärgad tygkasse med grönt tryck av tekanna,tekopp och margaritaglas "
     },
     {
         name: "Sh-eeerry",
-        image: "images/merch/tote/6.png",
+        image: "images/merch/tote/6.webp",
         alt: "Krämfärgad tygkasse med vinrött tryck av Frankie's logga och körsbär"
     },
     {
         name: "Triple Trouble",
-        image: "images/merch/tote/7.png",
+        image: "images/merch/tote/7.webp",
         alt: "Krämfärgad tygkasse med tre drinkar"
     },
     {
         name: "The Club Classic - Red",
-        image: "images/merch/tote/8.png",
+        image: "images/merch/tote/8.webp",
         alt: "Krämfärgad tygkasse med vintrött tryck av Frankie's logga och martiniglas"
     },
     {
         name: "The Club Classic - Green",
-        image: "images/merch/tote/9.png",
+        image: "images/merch/tote/9.webp",
         alt: "Krämfärgad tygkasse med grönt tryck av Frankie's logga och martiniglas"
     }
 ];
 
-    const posterItems = [
+
+const posterItems = [
     {
         name: "Triple Trouble ",
         image: "images/merch/posters/1.png",
@@ -180,13 +181,13 @@ const drinkItems = [
         name: "Sweet Talk",
         ingredients: "Gin, hallon, vanilj, citron och violsirap.",
         image: "images/drinks/7.png"
-    },  
+    },
 ];
 
 
 // --- 3. Eventlyssnare ---
 // Mobilmeny
-menuBtn.addEventListener("click", function() {
+menuBtn.addEventListener("click", function () {
 
     if (menu.classList.toggle("open")) {
         menuBtn.textContent = "✕";
@@ -211,7 +212,7 @@ function setupCarousel(carouselEl, carouselItems) {
     const descriptionEl = carouselEl.querySelector(".carousel-description");
     const prevBtn = carouselEl.querySelector(".prev");
     const nextBtn = carouselEl.querySelector(".next");
-    
+
 
     // Håller reda på vilken bild som visas, men start på index 0
     let currentIndex = 0;
@@ -220,7 +221,7 @@ function setupCarousel(carouselEl, carouselItems) {
     function updateCarousel() {
         imgEl.src = carouselItems[currentIndex].image;
         imgEl.alt = carouselItems[currentIndex].alt || "";
-        nameEl.textContent = carouselItems[currentIndex].name; 
+        nameEl.textContent = carouselItems[currentIndex].name;
 
         if (descriptionEl) {
             descriptionEl.textContent = carouselItems[currentIndex].ingredients || "";
@@ -228,19 +229,19 @@ function setupCarousel(carouselEl, carouselItems) {
     }
 
     // Går till nästa bild vid klick
-    nextBtn.addEventListener ("click", function() {
+    nextBtn.addEventListener("click", function () {
         currentIndex++;
 
         // Börjar om från första bilden om sista index passerats
         if (currentIndex >= carouselItems.length) {
-            currentIndex = 0; 
+            currentIndex = 0;
         }
 
         updateCarousel();
     });
 
     // Går till föregående bild vid klick
-    prevBtn.addEventListener ("click", function() {
+    prevBtn.addEventListener("click", function () {
         currentIndex--;
 
         // Hoppar till sista bilden om index blir mindre än 0
@@ -265,7 +266,7 @@ if (postersEl) {
 
 if (stuffEl) {
     setupCarousel(stuffEl, stuffItems);
-} 
+}
 
 if (drinksEl) {
     setupCarousel(drinksEl, drinkItems);
