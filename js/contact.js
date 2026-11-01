@@ -43,16 +43,6 @@ const formInputs = formEl.querySelectorAll("input, select, textarea");
 const errorMessages = formEl.querySelectorAll(".error-message");
 
 
-
-
-
-
-
-
-
-
-
-
 // --- 2. Eventlyssnare ---
 
 subjectEl.addEventListener("change", changeSubject);
@@ -221,6 +211,4 @@ function changeSubject() {
         bookingEl.classList.remove("hidden")
         eventInfoEl.classList.remove("hidden")
     }
-} 
-
-
+}
