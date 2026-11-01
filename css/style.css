@@ -320,16 +320,28 @@ header {
 
 /* Events sektion */
 .events-preview {
-    margin: 1rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 2rem 5rem;
+    margin: 1rem;
 }
 
-.today {
+.events-preview .accent-text {
+    color:inherit;
+    font-size: 1.5rem;
+}
+
+#today {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
+    font-size: 2rem;
+}
+
+.event-name {
+    font-size: 2rem;
+    text-decoration: underline;
+    margin: 0;
 }
 
 
@@ -751,6 +763,7 @@ footer img {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         margin: 0;
+        padding-bottom: 0;
     }
 
     .sips-snacks img {
