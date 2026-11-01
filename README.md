@@ -12,7 +12,8 @@ Webbplatsen är utvecklad med mobile-first som utgångspunkt och anpassas till o
 - JavaScript – interaktivitet och dynamisk funktionalitet
 - Git och GitHub – versionshantering och publicering
 
-✨ Funktioner
+
+## ✨ Funktioner
 - Responsiv navigering med hamburgermeny på mindre skärmar.
 - Bildkaruseller för presentation av produkter och signaturdrinkar.
 - Kontaktformulär med dynamiska fält och JavaScript-validering.
@@ -21,6 +22,6 @@ Webbplatsen är utvecklad med mobile-first som utgångspunkt och anpassas till o
 ## 📰 Publicerad webbplats
 - [GitHub Pages](https://emmahulten.github.io/projektuppgift_emmahulten/)
 
-📄 Dokumentation
+## 📄 Dokumentation
 - [Projektrapport(PDF)](file:///C:/Users/emmah/Documents/Projektuppgift/Rapport.pdf) - Finns också i mappen rapport/.
 - Wireframes och mockups finns i mappen design/.
